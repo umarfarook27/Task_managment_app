@@ -1,0 +1,146 @@
+/* General Styles */
+body {
+    background: linear-gradient(135deg, #3a0ca3, #7209b7, #f72585);
+    background-attachment: fixed;
+    background-size: cover;
+    color: white; /* Ensures text is visible */
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Optional: Style the sections to have a slight transparency */
+.section {
+    background: rgba(255, 255, 255, 0.1); /* Transparent white */
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+/* Container */
+
+/* Dark Mode for Container */
+body.dark-mode .container {
+    background: #444;
+}
+
+/* Task Input */
+.task-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.task-input input, .task-input select {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.task-input button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Task List */
+.task-list {
+    text-align: left;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: grab;
+}
+
+/* Dark Mode for Tasks */
+body.dark-mode .task {
+    background: #666;
+    color: white;
+}
+
+
+.priority {
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.high { background: #dc3545; color: white; }
+.medium { background: #ffc107; color: black; }
+.low { background: #28a745; color: white; }
+
+
+button {
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px 10px;
+    margin-left: 5px;
+}
+
+.complete-btn { background: #007bff; color: white; }
+.delete-btn { background: red; color: white; }
+.edit-btn { background: orange; color: white; }
+
+.switch {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background: #ccc;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 50%;
+    top: 1px;
+    left: 2px;
+    transition: 0.3s;
+}
+
+.switch input:checked + .slider {
+    background: #28a745;
+}
+
+.switch input:checked + .slider:before {
+    transform: translateX(20px);
+}

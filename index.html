@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="logo">Task Manager</div>
+        <button class="button" onclick="clearTasks()">Clear All</button>
+        <button class="button" onclick="toggleDarkMode()">Dark Mode</button>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <h1>Manage Your Tasks</h1>
+
+        <!-- Task Input -->
+        <div class="section">
+            <input type="text" id="taskInput" placeholder="Enter a new task">
+            <button class="button" onclick="addTask()">Add Task</button>
+        </div>
+
+        <!-- Task List -->
+        <div class="task-list section">
+            <h2>Tasks</h2>
+            <ul id="taskContainer"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
